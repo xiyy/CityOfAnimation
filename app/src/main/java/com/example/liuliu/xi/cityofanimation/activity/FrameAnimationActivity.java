@@ -1,9 +1,11 @@
-package com.example.liuliu.xi.cityofanimation;
+package com.example.liuliu.xi.cityofanimation.activity;
 
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ImageView;
+
+import com.example.liuliu.xi.cityofanimation.R;
 
 public class FrameAnimationActivity extends AppCompatActivity {
     private ImageView mFrame1;

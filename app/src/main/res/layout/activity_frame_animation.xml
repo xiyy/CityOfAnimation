@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="@color/colorPrimaryDark"
     android:orientation="vertical"
-    tools:context="com.example.liuliu.xi.cityofanimation.FrameAnimationActivity">
+    tools:context="com.example.liuliu.xi.cityofanimation.activity.FrameAnimationActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
