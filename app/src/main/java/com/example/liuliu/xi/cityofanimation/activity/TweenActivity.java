@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.view.animation.RotateAnimation;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.ImageView;
@@ -38,6 +39,10 @@ public class TweenActivity extends AppCompatActivity implements View.OnClickList
     private ImageView mImageIcon;
     private Button mStopAnimation;
     private Animation mAnimation;
+    private float pivotXValue;
+    private float pivotYValue;
+    private float degree;
+    private float time;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,6 +74,80 @@ public class TweenActivity extends AppCompatActivity implements View.OnClickList
         mImageIcon = (ImageView) findViewById(R.id.tween_activity_icon);
         mStopAnimation = (Button) findViewById(R.id.tween_activity_stopAnim);
         mStopAnimation.setOnClickListener(this);
+        mPivotX.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                pivotXValue = progress / 100.f;
+                mPivotXValue.setText(pivotXValue + "");
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
+        mPivotY.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                pivotYValue = progress / 100.f;
+                mPivotYValue.setText(pivotYValue + "");
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
+        mDegree.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                degree = 360 * progress / 100.f;
+                mDegreeValue.setText(degree + "");
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
+        mDurationTime.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                if (progress <= 10) {
+                    progress = 10;
+                } else if (progress >= 100) {
+                    progress = 100;
+                }
+                time = 100 * progress;
+                mTimeValue.setText(time + " ms");
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
     }
 
     @Override
@@ -94,7 +173,50 @@ public class TweenActivity extends AppCompatActivity implements View.OnClickList
     }
 
     private void alphaAnimation() {
-        mAnimation = AnimationUtils.loadAnimation(this, R.anim.alpha_tween_activity);
+        mAnimation = AnimationUtils.loadAnimation(this, R.anim.tween_activity_alpha);
+        setProperty();
+        mImageIcon.startAnimation(mAnimation);
+    }
+
+    private void translateAnimation() {
+        mAnimation = AnimationUtils.loadAnimation(this, R.anim.tween_activity_translate);
+        setProperty();
+        mImageIcon.startAnimation(mAnimation);
+    }
+
+    private void scaleAnimation() {
+        //xml文件中，pivotX、pivotY代表从哪个点开始缩放，含义和rotateAnimation()中4、6参数相同
+        if (mScale1.isChecked()) {
+            mAnimation = AnimationUtils.loadAnimation(this, R.anim.tween_activity_scale_1);
+        } else if (mScale2.isChecked()) {
+            mAnimation = AnimationUtils.loadAnimation(this, R.anim.tween_activity_scale_2);
+        } else {
+            mAnimation = AnimationUtils.loadAnimation(this, R.anim.tween_activity_scale_3);
+        }
+        setProperty();
+        mImageIcon.startAnimation(mAnimation);
+    }
+
+    private void rotateAnimation() {
+        //第4和第6个参数，决定了图像围绕哪个点旋转，如(0,0)，则图像围绕左上顶点旋转；(0.2,0.5)，
+        // 则图像围绕(0.2*imageView.width,0.5*imageView.height)旋转；(0.5,0.5)则图像围绕图像中心旋转;
+        //(1.0,1.0)，则图像围绕右下顶点旋转；
+        mAnimation = new RotateAnimation(-degree, degree, Animation.RELATIVE_TO_SELF,
+                pivotXValue, Animation.RELATIVE_TO_SELF, pivotYValue);
+        mAnimation.setDuration((int) time);
+        setProperty();
+        mImageIcon.startAnimation(mAnimation);
+    }
+
+    private void stopAnimation() {
+        mImageIcon.clearAnimation();
+        if (mAnimation != null) {
+            mAnimation.cancel();
+            mAnimation.reset();
+        }
+    }
+
+    private void setProperty() {
         //动画完成后，是否回到初始状态
         if (isKeep.isChecked()) {
             mAnimation.setFillAfter(true);
@@ -113,26 +235,6 @@ public class TweenActivity extends AppCompatActivity implements View.OnClickList
         } else {
             mAnimation.setRepeatCount(0);
         }
-        mImageIcon.startAnimation(mAnimation);
-    }
 
-    private void translateAnimation() {
-
-    }
-
-    private void scaleAnimation() {
-
-    }
-
-    private void rotateAnimation() {
-
-    }
-
-    private void stopAnimation() {
-        mImageIcon.clearAnimation();
-        if (mAnimation != null) {
-            mAnimation.cancel();
-            mAnimation.reset();
-        }
     }
 }
