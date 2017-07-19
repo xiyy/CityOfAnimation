@@ -25,7 +25,12 @@
         <activity
             android:name=".activity.BlurActivity"
             android:label="Blur" />
-        <activity android:name=".activity.SwitchAnimActivity"></activity>
+        <activity
+            android:name=".activity.SwitchAnimActivity"
+            android:label="@string/main_activity_transition" />
+        <activity
+            android:name=".activity.ViewPagerAnimActivity"
+            android:label="@string/main_activity_view_pager"></activity>
     </application>
 
 </manifest>
