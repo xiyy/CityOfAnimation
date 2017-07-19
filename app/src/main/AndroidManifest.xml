@@ -21,7 +21,10 @@
             android:label="@string/main_activity_frame_animation" />
         <activity
             android:name=".activity.TweenActivity"
-            android:label="@string/main_activity_tween_animation"></activity>
+            android:label="@string/main_activity_tween_animation" />
+        <activity
+            android:name=".activity.BlurActivity"
+            android:label="Blur"></activity>
     </application>
 
 </manifest>

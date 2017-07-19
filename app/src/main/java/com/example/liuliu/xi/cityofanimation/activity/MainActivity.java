@@ -41,7 +41,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 overridePendingTransition(R.anim.enter_from_bottom, R.anim.exit_to_bottom);
                 break;
             case R.id.main_activity_blur_button:
-
+                Intent blurIntent = new Intent(MainActivity.this, BlurActivity.class);
+                startActivity(blurIntent);
+                overridePendingTransition(R.anim.zoomin, R.anim.zoomout);
                 break;
         }
     }

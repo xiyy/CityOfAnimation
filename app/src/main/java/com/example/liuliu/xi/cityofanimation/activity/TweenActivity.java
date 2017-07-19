@@ -201,6 +201,7 @@ public class TweenActivity extends AppCompatActivity implements View.OnClickList
         //第4和第6个参数，决定了图像围绕哪个点旋转，如(0,0)，则图像围绕左上顶点旋转；(0.2,0.5)，
         // 则图像围绕(0.2*imageView.width,0.5*imageView.height)旋转；(0.5,0.5)则图像围绕图像中心旋转;
         //(1.0,1.0)，则图像围绕右下顶点旋转；
+        //参数3,5代表相对本身旋转
         mAnimation = new RotateAnimation(-degree, degree, Animation.RELATIVE_TO_SELF,
                 pivotXValue, Animation.RELATIVE_TO_SELF, pivotYValue);
         mAnimation.setDuration((int) time);
