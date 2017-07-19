@@ -5,4 +5,10 @@
     <string name="main_activity_blur">Blur</string>
     <string name="main_activity_transition">Activity Transition</string>
     <string name="main_activity_view_pager">ViewPager</string>
+    <string name="style1_view_pager_activity">Style1</string>
+    <string name="style2_view_pager_activity">Style2</string>
+    <string name="style3_view_pager_activity">Style3</string>
+    <string name="style4_view_pager_activity">Style4</string>
+    <string name="style5_view_pager_activity">Style5</string>
+    <string name="style6_view_pager_activity">Style6</string>
 </resources>

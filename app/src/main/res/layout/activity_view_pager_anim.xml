@@ -1,12 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.example.liuliu.xi.cityofanimation.activity.ViewPagerAnimActivity">
 
     <android.support.v4.view.ViewPager
         android:id="@+id/view_pager_anim_activity"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"></android.support.v4.view.ViewPager>
-</RelativeLayout>
+        android:layout_height="0dp"
+        android:layout_weight="1"></android.support.v4.view.ViewPager>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/anim1_view_pager_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/style1_view_pager_activity" />
+
+        <Button
+            android:id="@+id/anim2_view_pager_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/style2_view_pager_activity" />
+
+        <Button
+            android:id="@+id/anim3_view_pager_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/style3_view_pager_activity" />
+
+        <Button
+            android:id="@+id/anim4_view_pager_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/style4_view_pager_activity" />
+
+        <Button
+            android:id="@+id/anim5_view_pager_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/style5_view_pager_activity" />
+
+        <Button
+            android:id="@+id/anim6_view_pager_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/style6_view_pager_activity" />
+
+    </LinearLayout>
+
+</LinearLayout>
