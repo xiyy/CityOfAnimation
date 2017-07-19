@@ -10,8 +10,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.liuliu.xi.cityofanimation.R;
+import com.example.liuliu.xi.cityofanimation.impl.CubeTransformer;
+import com.example.liuliu.xi.cityofanimation.impl.DepthPageTransform;
 import com.example.liuliu.xi.cityofanimation.impl.SimplePageTransform;
 import com.example.liuliu.xi.cityofanimation.impl.ZoomInTransform;
+import com.example.liuliu.xi.cityofanimation.impl.ZoomOutTransform;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,7 +33,11 @@ public class ViewPagerAnimActivity extends AppCompatActivity {
         mViewPager.setAdapter(new PagerAdapter());
         //mViewPager.setPageTransformer(true, new ZoomInTransform());//试试效果
         //mViewPager.setPageTransformer(false, new ZoomInTransform());//试试效果
-        mViewPager.setPageTransformer(true, new SimplePageTransform());//3D效果
+        //mViewPager.setPageTransformer(true, new SimplePageTransform());//3D效果
+        //mViewPager.setPageTransformer(true, new DepthPageTransform());//透明度、大小变化
+        //mViewPager.setPageTransformer(true, new ZoomOutTransform());
+        mViewPager.setPageTransformer(true, new CubeTransformer(90));//3D效果
+
     }
 
     private void setAdapterData() {
