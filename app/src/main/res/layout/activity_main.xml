@@ -38,4 +38,9 @@
         android:layout_height="wrap_content"
         android:text="@string/main_activity_view_pager" />
 
+    <Button
+        android:id="@+id/main_activity_property_animation_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/main_activity_property_animation" />
 </LinearLayout>

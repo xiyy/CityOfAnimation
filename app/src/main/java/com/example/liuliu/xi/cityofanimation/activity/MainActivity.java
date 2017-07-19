@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button mBlurButton;
     private Button mActivityTransitonButton;
     private Button mViewPagerButton;
+    private Button mPropertyButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +30,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mActivityTransitonButton.setOnClickListener(this);
         mViewPagerButton = (Button) findViewById(R.id.main_activity_view_pager);
         mViewPagerButton.setOnClickListener(this);
+        mPropertyButton = (Button) findViewById(R.id.main_activity_property_animation_button);
+        mPropertyButton.setOnClickListener(this);
     }
 
     @Override
@@ -60,6 +63,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Intent viewPagerIntent = new Intent(MainActivity.this, ViewPagerAnimActivity.class);
                 startActivity(viewPagerIntent);
                 overridePendingTransition(R.anim.zoomin, R.anim.zoomout);
+                break;
+            case R.id.main_activity_property_animation_button:
+                Intent propertyAnimIntent = new Intent(MainActivity.this, PropertyAnimEnterActivity.class);
+                startActivity(propertyAnimIntent);
                 break;
         }
     }

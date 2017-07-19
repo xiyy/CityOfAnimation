@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:showDividers="middle">
+
+    <Button
+        android:id="@+id/property_property_anim_enter_activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:text="PropertyAnimation" />
+
+    <Button
+        android:id="@+id/value_property_anim_enter_activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:text="PropertyValueAnimation" />
+
+    <Button
+        android:id="@+id/ali_pay_property_anim_activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:text="Pay_Anim" />
+
+    <Button
+        android:id="@+id/shop_car_add_property_anim_activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:text="shop_car_add_anim" />
+
+    <Button
+        android:id="@+id/Layout_Animations_property_anim_activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:text="LayoutAnimations" />
+
+    <Button
+        android:id="@+id/Reveal_Animator_propterty_anim_activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:text="RevealAnimator" />
+
+
+</LinearLayout>

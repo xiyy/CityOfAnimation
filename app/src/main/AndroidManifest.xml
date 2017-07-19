@@ -30,7 +30,9 @@
             android:label="@string/main_activity_transition" />
         <activity
             android:name=".activity.ViewPagerAnimActivity"
-            android:label="@string/main_activity_view_pager"></activity>
+            android:label="@string/main_activity_view_pager" />
+        <activity android:name=".activity.PropertyAnimEnterActivity" />
+        <activity android:name=".activity.PropertyAnimActivity"></activity>
     </application>
 
 </manifest>
