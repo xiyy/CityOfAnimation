@@ -12,6 +12,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button mFrameButton;
     private Button mTweenButton;
     private Button mBlurButton;
+    private Button mActivityTransitonButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +24,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mTweenButton.setOnClickListener(this);
         mBlurButton = (Button) findViewById(R.id.main_activity_blur_button);
         mBlurButton.setOnClickListener(this);
+        mActivityTransitonButton = (Button) findViewById(R.id.main_activity_transition_activity);
+        mActivityTransitonButton.setOnClickListener(this);
     }
 
     @Override
@@ -45,6 +48,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(blurIntent);
                 overridePendingTransition(R.anim.zoomin, R.anim.zoomout);
                 break;
+            case R.id.main_activity_transition_activity:
+                Intent transitionIntent = new Intent(MainActivity.this, SwitchAnimActivity.class);
+                startActivity(transitionIntent);
+                overridePendingTransition(R.anim.zoomin, R.anim.zoomout);
         }
     }
 }
