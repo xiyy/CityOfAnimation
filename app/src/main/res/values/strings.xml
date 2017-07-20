@@ -12,5 +12,9 @@
     <string name="style4_view_pager_activity">Style4</string>
     <string name="style5_view_pager_activity">Style5</string>
     <string name="style6_view_pager_activity">Style6</string>
+    <string name="start">开始</string>
     <string name="stop">停止</string>
+    <string name="line_style1_value_animator_activity">Line</string>
+    <string name="line_style2_value_animator_activity">Line_Color</string>
+    <string name="line_style3_value_animator_activity">Line_Sin</string>
 </resources>

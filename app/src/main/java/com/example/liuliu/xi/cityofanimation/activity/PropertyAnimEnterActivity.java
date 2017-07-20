@@ -42,7 +42,9 @@ public class PropertyAnimEnterActivity extends AppCompatActivity implements View
                 startActivity(propertyIntent);
                 break;
             case R.id.value_property_anim_enter_activity:
-
+                Intent valueAnimatorIntent = new Intent(this, ValueAnimatorActivity.class);
+                startActivity(valueAnimatorIntent);
+                overridePendingTransition(R.anim.enter_from_bottom, R.anim.exit_to_bottom);
                 break;
             case R.id.ali_pay_property_anim_activity:
 

@@ -31,8 +31,15 @@
         <activity
             android:name=".activity.ViewPagerAnimActivity"
             android:label="@string/main_activity_view_pager" />
-        <activity android:name=".activity.PropertyAnimEnterActivity" />
-        <activity android:name=".activity.PropertyAnimActivity"></activity>
+        <activity
+            android:name=".activity.PropertyAnimEnterActivity"
+            android:label="@string/main_activity_property_animation" />
+        <activity
+            android:name=".activity.PropertyAnimActivity"
+            android:label="ObjectAnimator" />
+        <activity
+            android:name=".activity.ValueAnimatorActivity"
+            android:label="ValueAnimator"></activity>
     </application>
 
 </manifest>

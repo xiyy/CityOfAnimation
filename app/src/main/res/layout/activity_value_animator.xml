@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/line_value_animator_activity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="true"
+                android:text="@string/line_style1_value_animator_activity" />
+
+            <RadioButton
+                android:id="@+id/line_color_value_animator_activity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/line_style2_value_animator_activity" />
+
+            <RadioButton
+                android:id="@+id/line_sin_value_animator_activity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/line_style3_value_animator_activity" />
+        </RadioGroup>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+            <RadioButton
+                android:id="@+id/LinearInterpolator_value_animator_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="LinearInterpolator" />
+
+            <RadioButton
+                android:id="@+id/accelerate__interpolator_value_animator_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="AccelerateInterpolator" />
+
+            <RadioButton
+                android:id="@+id/DecelerateInterpolator_value_animator_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DecelerateInterpolator" />
+
+            <RadioButton
+                android:id="@+id/accelerate_decelerate_interpolator_value_animator_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="AccelerateDecelerateInterpolator" />
+
+            <RadioButton
+                android:id="@+id/bounce_interpolator_value_animator_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BounceInterpolator" />
+
+            <RadioButton
+                android:id="@+id/AnticipateInterpolator_value_animator_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="AnticipateInterpolator" />
+
+            <RadioButton
+                android:id="@+id/LinearOutSlowInInterpolator_value_animator_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="LinearOutSlowInInterpolator" />
+
+            <RadioButton
+                android:id="@+id/OvershootInterpolator_value_animator_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="OvershootInterpolator" />
+
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+            <Button
+                android:id="@+id/start_anim_button_value_animator_activity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/start" />
+
+            <Button
+                android:id="@+id/stop_anim_button_value_animator_activity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/stop" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.example.liuliu.xi.cityofanimation.view.LineView
+        android:id="@+id/line_view_value_animator_activity"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+</FrameLayout>
+
+
