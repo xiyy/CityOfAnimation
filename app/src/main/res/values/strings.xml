@@ -12,4 +12,5 @@
     <string name="style4_view_pager_activity">Style4</string>
     <string name="style5_view_pager_activity">Style5</string>
     <string name="style6_view_pager_activity">Style6</string>
+    <string name="stop">停止</string>
 </resources>
