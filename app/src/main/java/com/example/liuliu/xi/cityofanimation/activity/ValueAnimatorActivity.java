@@ -17,6 +17,7 @@ import android.widget.RadioButton;
 
 import com.example.liuliu.xi.cityofanimation.R;
 import com.example.liuliu.xi.cityofanimation.view.LineView;
+import com.example.liuliu.xi.cityofanimation.view.LineViewColorChange;
 
 public class ValueAnimatorActivity extends AppCompatActivity implements View.OnClickListener {
     private RadioButton mLine;
@@ -33,6 +34,7 @@ public class ValueAnimatorActivity extends AppCompatActivity implements View.OnC
     private Button mStart;
     private Button mStop;
     private LineView mLineView;
+    private LineViewColorChange mLineViewColorChange;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +56,7 @@ public class ValueAnimatorActivity extends AppCompatActivity implements View.OnC
         mStart.setOnClickListener(this);
         mStop.setOnClickListener(this);
         mLineView = (LineView) findViewById(R.id.line_view_value_animator_activity);
+        mLineViewColorChange = (LineViewColorChange) findViewById(R.id.line_view_color_change);
     }
 
     @Override
@@ -75,7 +78,9 @@ public class ValueAnimatorActivity extends AppCompatActivity implements View.OnC
             mLineView.startAnimation();
 
         } else if (mLineColor.isChecked()) {
-
+            mLineViewColorChange.setVisibility(View.VISIBLE);
+            mLineViewColorChange.setInterpolator(getInterpolator());
+            mLineViewColorChange.startAnimation();
         } else {
 
         }
@@ -86,6 +91,10 @@ public class ValueAnimatorActivity extends AppCompatActivity implements View.OnC
         if (mLineView.getVisibility() == View.VISIBLE) {
             mLineView.clearAnimation();
             mLineView.setVisibility(View.GONE);
+        }
+        if (mLineViewColorChange.getVisibility() == View.VISIBLE) {
+            mLineViewColorChange.clearAnimation();
+            mLineViewColorChange.setVisibility(View.GONE);
         }
 
     }

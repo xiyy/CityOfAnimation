@@ -118,6 +118,12 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:visibility="gone" />
+
+    <com.example.liuliu.xi.cityofanimation.view.LineViewColorChange
+        android:id="@+id/line_view_color_change"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
 </FrameLayout>
 
 
