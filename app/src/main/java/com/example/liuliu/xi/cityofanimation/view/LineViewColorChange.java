@@ -12,8 +12,8 @@ import android.util.AttributeSet;
 import android.view.View;
 
 import com.example.liuliu.xi.cityofanimation.bean.Point;
-import com.example.liuliu.xi.cityofanimation.impl.ColorEvaluator;
-import com.example.liuliu.xi.cityofanimation.impl.PointEvaluator;
+import com.example.liuliu.xi.cityofanimation.impl.PointColorEvaluator;
+import com.example.liuliu.xi.cityofanimation.impl.PointMoveEvaluator;
 
 /**
  * Created by zhangxb171 on 2017/7/20.
@@ -42,7 +42,7 @@ public class LineViewColorChange extends View {
         //点的移动
         Point start = new Point(RADIUS, RADIUS);
         Point end = new Point(getWidth() - RADIUS, getHeight() - RADIUS);
-        ValueAnimator moveAnim = ValueAnimator.ofObject(new PointEvaluator(), start, end);
+        ValueAnimator moveAnim = ValueAnimator.ofObject(new PointMoveEvaluator(), start, end);
         moveAnim.setDuration(5000);
         moveAnim.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
             @Override
@@ -52,7 +52,7 @@ public class LineViewColorChange extends View {
             }
         });
         //点的颜色渐变,改变LineViewColorChange的color属性
-        ObjectAnimator colorChangeAnim = ObjectAnimator.ofObject(this, "color", new ColorEvaluator(), "#0000ff", "#ff0000");
+        ObjectAnimator colorChangeAnim = ObjectAnimator.ofObject(this, "color", new PointColorEvaluator(), "#0000ff", "#ff0000");
         colorChangeAnim.setDuration(5000);
         colorChangeAnim.setInterpolator(mInterpolator);//颜色变化的快慢程度
         AnimatorSet set = new AnimatorSet();

@@ -8,7 +8,7 @@ import com.example.liuliu.xi.cityofanimation.bean.Point;
  * Created by zhangxb171 on 2017/7/20.
  */
 
-public class PointEvaluator implements TypeEvaluator {
+public class PointMoveEvaluator implements TypeEvaluator {
     /**
      * @param fraction   0.0-1.0，表示动画已经完成的进度
      * @param startValue 动画初始值

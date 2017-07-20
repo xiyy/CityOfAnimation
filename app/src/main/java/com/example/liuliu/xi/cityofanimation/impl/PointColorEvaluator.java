@@ -6,7 +6,7 @@ import android.animation.TypeEvaluator;
  * Created by zhangxb171 on 2017/7/20.
  */
 
-public class ColorEvaluator implements TypeEvaluator {
+public class PointColorEvaluator implements TypeEvaluator {
     private int mCurrentRed = -1;
 
     private int mCurrentGreen = -1;

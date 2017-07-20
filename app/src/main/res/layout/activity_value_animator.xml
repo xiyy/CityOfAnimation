@@ -124,6 +124,12 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:visibility="gone" />
+
+    <com.example.liuliu.xi.cityofanimation.view.SinView
+        android:id="@+id/sin_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
 </FrameLayout>
 
 

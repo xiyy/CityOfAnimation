@@ -10,7 +10,7 @@ import android.util.AttributeSet;
 import android.view.View;
 
 import com.example.liuliu.xi.cityofanimation.bean.Point;
-import com.example.liuliu.xi.cityofanimation.impl.PointEvaluator;
+import com.example.liuliu.xi.cityofanimation.impl.PointMoveEvaluator;
 
 /**
  * Created by zhangxb171 on 2017/7/20.
@@ -42,7 +42,7 @@ public class LineView extends View {
     public void startAnimation() {
         Point start = new Point(RADIUS, RADIUS);
         Point end = new Point(getWidth() - RADIUS, getHeight() - RADIUS);
-        ValueAnimator valueAnimator = ValueAnimator.ofObject(new PointEvaluator(), start, end);
+        ValueAnimator valueAnimator = ValueAnimator.ofObject(new PointMoveEvaluator(), start, end);
         valueAnimator.setDuration(5000);
         valueAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
             @Override
