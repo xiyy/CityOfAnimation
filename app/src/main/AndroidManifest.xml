@@ -39,7 +39,9 @@
             android:label="ObjectAnimator" />
         <activity
             android:name=".activity.ValueAnimatorActivity"
-            android:label="ValueAnimator"></activity>
+            android:label="ValueAnimator" />
+        <activity android:name=".activity.PayAnimActivity"
+            android:label="PayAnimActivity"></activity>
     </application>
 
 </manifest>

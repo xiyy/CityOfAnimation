@@ -47,7 +47,9 @@ public class PropertyAnimEnterActivity extends AppCompatActivity implements View
                 overridePendingTransition(R.anim.enter_from_bottom, R.anim.exit_to_bottom);
                 break;
             case R.id.ali_pay_property_anim_activity:
-
+                Intent payAnimIntent = new Intent(this, PayAnimActivity.class);
+                startActivity(payAnimIntent);
+                overridePendingTransition(R.anim.zoomin, R.anim.zoomout);
                 break;
             case R.id.shop_car_add_property_anim_activity:
 
