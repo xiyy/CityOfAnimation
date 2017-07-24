@@ -52,7 +52,9 @@ public class PropertyAnimEnterActivity extends AppCompatActivity implements View
                 overridePendingTransition(R.anim.zoomin, R.anim.zoomout);
                 break;
             case R.id.shop_car_add_property_anim_activity:
-
+                Intent shopCarAddIntent = new Intent(this, ShopCarAddAnimActivity.class);
+                startActivity(shopCarAddIntent);
+                overridePendingTransition(R.anim.zoomin, R.anim.zoomout);
                 break;
             case R.id.Layout_Animations_property_anim_activity:
 
